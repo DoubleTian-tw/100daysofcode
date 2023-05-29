@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image</title>
+        <link rel="stylesheet" href="publicStyle.css">
+    </head>
+    <body>
+        <h1>Image Map</h1>
+        <h2>what is map?</h2>
+        <hr>
+        <p>Map will define an area which clickable area.</p>
+        <img src="../picture/biker equipment.jpg" alt="There's a biker"
+        style="width:350px; height:200px" usemap="#biker">
+        <map name="biker">
+            <area shape="circle" coords="260,20,40" href="https://th.bing.com/th/id/R.d53b4d6e8c0d602153e7df5adb326bd2?rik=6qAnZDNzD8rJ5Q&pid=ImgRaw&r=0" 
+            alt="Helmet" title="Helmet" onclick="showAlert('Helmet')">
+            <area shape="rect" coords="175,30,320,110" href="https://th.bing.com/th/id/R.09f3eac0cefa7914ed8c071ebd63b1e8?rik=AMMakXjENzEJaA&riu=http%3a%2f%2fe.ridersdiscount.com%2fimages%2frst%2f2016%2fSeptember%2fBG-RST1425BK40-PRIMARY.jpg&ehk=%2b4vNv56sRCPUHmuljgNniz2FVI2joTZU9N7oaK41XDc%3d&risl=&pid=ImgRaw&r=0" 
+            alt="Jacket" title="Jacket" onclick="showAlert('Jacket')">
+            <area shape="rect" coords="180,120,240,160" href="https://th.bing.com/th/id/OIP.O6G5oZkxjN5-7dRG0TryRwHaHa?pcl=1b1a19&pid=ImgDet&dpr=1.3" 
+            alt="Gloves" title="Gloves"  onclick="showAlert('Gloves')">
+            <area shape="rect" coords="70,160,240,200" href="https://th.bing.com/th/id/OIP.BAwKhzf_SmCJD-HP2eXvTAHaFC?pid=ImgDet&rs=1" 
+            alt="motorcyle" title="motorcycle"  onclick="showAlert('motorcycle')">
+        </map>
+        <h2>Usemap attribute</h2>
+        <hr>
+        <p>Usemap is define in the img tag</p>
+        <p>&lt;img usemap="#NAME"&gt;</p>
+        
+        <h2>Map tag</h2>
+        <hr>
+        <p>Map tag defined a clickable area.</p>
+        <p>&lt;map name="NAME"&gt; &lt;/map&gt;</p>
+
+        <h2>Area tag</h2>
+        <hr>
+        <p>Area tag locate the coordinates of items in the image.</p>
+        <p>&lt;area shape="rect" coords="175,30,320,110"
+        href="#"
+        alt="Jacket" title="Jacket"&gt;</p>
+        <p>The meaning of each attribute :</p>
+        <ul>
+            <li>SHAPE: This define a clickable area with rect(rectangular),circle,poly(polygonal) and default.</li>
+            <li>COORDS: This define the coordinates position of each shapes.</li>
+        </ul>
+        <p>A clickable area can also trigger javasrcipt function.</p>
+        <script>
+            function showAlert(item){
+                alert(`This is ${item}`)
+            }
+        </script>
+    </body>
+</html>

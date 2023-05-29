@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day5-16-April-2023</title>
+    </head>
+    <body>
+        <h1>What is comment tags?</h1>
+        <hr>
+        <p>Its won't display on browser, but in source code</p>
+        <!--<p>Hi! I'm comment</p>-->
+        <p>Also hides <!--WTF--> part of the text in the middle.</p>
+        <p>Can't find anything? Click F12 and inspect Elements page in source code.</p>
+        <h1>Sets the color specified by the color name.</h1>
+        <hr>
+        <div style="color:dodgerblue">Use font color name : DodgerBlue</div>
+        <div style="background-color:coral; text-align: center;"><h2>Background color : CORAL</h3></div>
+        <div style="border: 1px solid rosybrown;">Border Color : Rosybrown</div>
+        <div style="background-color: RGB(0,0,0); color:aliceblue">Use color by RGB</div>
+        <div style="background-color: #73e4fe;">Use color by HEX</div>
+        <div style="background-color: hsl(5, 99%, 71%);">Use color by Hue-Saturation-Lightnessw</div>
+        <h2>RGB Setting Way</h2>
+        <hr>
+        <p>The arttribute order of the RGB method is Red, Green then Blue </p>
+        <p>And its setting value is between 0 to 255</p>
+        <p style="color: RGB(255,0,0);">Red Font: RGB(255,0,0)</p>
+        <p style="color: RGB(0,255,0);">Green Font: RGB(0,255,0)</p>
+        <p style="color: RGB(0,0,255);">Blue Font: RGB(0,0,255)</p>
+        <p style="color: RGB(255,255,255); background-color: RGB(0,0,0);">White Font: RBG(255,255,255)</p>
+        <p style="color: RGB(0,0,0);">Black Font: RGB(0,0,0)</p>
+        <h2>RGBA</h2>
+        <hr>
+        <p>A is an abbreviation for Alpha, that means opacity.</p>
+        <p style="color: RGB(255,255,255); background-color:RGBA(0,150,150,0.5);">Setting value of opacity is between 0 to 1</p>
+        <h2>HEX Setting Way</h2>
+        <hr>
+        <p>The arttribue order of Hexadecimal method is Red, Green then Blue also.</p>
+        <p>Unlike RGB, the setting value is between 00 to ff.</p>
+        <p style="color: #ff0000;">Red Font: #ff0000</p>
+        <p style="color: #00ff00;">Green Font: #00ff00</p>
+        <p style="color: #0000ff;">Blue Font: #0000ff</p>
+        <p style="color: #ffffff; background-color: #000000;">White Font: #ffffff</p>
+        <p style="color: #000000">Black Font: #000000</p>
+        <p>Hexadecimal doesn't have opacity like RGB.</p>
+        <h2>HSL</h2>
+        <hr>
+        <p>HSL is abbreviation for Hue, Saturation and Lightness.</p>
+        <h3>Hue</h3>
+        <p>Hue is a degree of color circle. You can set it between 0 to 360.The order is Red, Green then Blue also.</p>
+        <p style="color:HSL(0,100%,50%)">When Hue is 0, the color is Red.</p>
+        <p style="color:HSL(120,100%,50%)">When 120, the color is Green.</p>
+        <p style="color:HSL(240,100%,50%)">When 240, the color is Blue.</p>
+        <p style="color:HSL(360,100%,50%)">When 360, the color is back to Red.</p>
+        <h3>Saturation</h3>
+        <p>Its value is between 0% to 100%,representing gray to pure color.</p>
+        <p style="color:HSL(0,0%,50%)">This is Red.But saturation is 0%</p>
+        <p style="color:HSL(0,50%,50%)">This is Red.But saturation is 50%</p>
+        <p style="color:HSL(0,100%,50%)">This is Red also.But saturation is 100%</p>
+        <h3>Lightness</h3>
+        <p>Its value is between 0% to 100%,representing no light(black) to full light(white)</p>
+        <p style="color:HSL(120,100%,0%)">This is Green,but Lightness is 0%</p>
+        <p style="color:HSL(120,100%,50%)">This is Green,but Lightness is 50%</p>
+        <p style="color:HSL(120,100%,100%); background-color: HSL(0,100%,0%);">This is Green,but Lightness is 100%</p>
+        <h2>HSLA</h2>
+        <hr>
+        <p>As same as RGBA, opacity can be set.</p>
+        <p>Value is between 0 to 1.</p>
+        <p style="color:HSL(50,0%,0%); background-color: HSL(210,50%,50%,0.2);">Opacity</p>
+    </body>
+
+</html>

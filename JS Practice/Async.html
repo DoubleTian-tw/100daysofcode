@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <header>
+
+    </header>
+    <body>
+        <p id="msg"></p>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            let msg = '';
+            //一般function
+            function sayHi(name)
+            {
+                msg = `Hi! ${name}`;
+            }
+            sayHi('John');
+            //Callback function
+            function sayHiCallback(myCallback,name)
+            {
+                myCallback(name);
+            }
+            function callme(who)
+            {
+                msg = `${who}, I am called!`;
+            }
+            sayHiCallback(callme,'Bob');
+            document.getElementById("msg").innerHTML = msg;
+            
+            //非同步
+            console.log('Async Code start');
+            setTimeout(()=>{
+                console.log('Async event')
+            },300);
+            console.log('Async Code end')
+            //output result
+            //Code start
+            //Code end
+            //Async event
+            //當遇到非同步事件時，會排在程式碼最後方最後才執行
+            
+            //利用promise執行setTimeout
+            console.log('Promise started');
+            const myName = function(){
+                return new Promise(function(resolve, reject)
+                {
+                    setTimeout(() => {
+                        resolve(' Ray');
+                    },300);
+                })
+            }    
+            myName()
+            .then((res)=>console.log('Promise success' + res))
+            .catch((error) => console.log('Promise fail' + error))
+            console.log('Promise end');
+        </script>
+    </body>
+</html>

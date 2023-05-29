@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day1-20-May-2023</title>
+        <link rel="stylesheet" href="../HTML Practice/publicStyle.css">
+        <script>
+            function changeContent(id,content){
+                document.getElementById(id).innerHTML = content
+            }
+        </script>
+    </head>
+    <body>
+        <h1>What can javascript do?</h1>
+        
+        <h2>Change html content</h2>
+        <hr>
+        <p id="changeContent">Hello world.</p>
+        <button type="button" 
+        onclick="document.getElementById('changeContent').innerHTML = 'Hey, You did it!' ">
+            Click me
+        </button>
+        
+        <h2>Change html attribute</h2>
+        <hr>
+        <button type="button" onclick="document.getElementById('bulb').src='../picture/pic_bulbon.gif'">
+            Trun on the light
+        </button>
+        <img id="bulb" src="../picture/pic_bulboff.gif" alt="bulb off" height="150px">
+        <button type="button" onclick="document.getElementById('bulb').src='../picture/pic_bulboff.gif'">
+            Trun off the light
+        </button>
+        
+        <h2>Change CSS style</h2>
+        <hr>
+        <p id="changeStyle">You can used Style Fontsize to change font size</p>
+        <button type="button" onclick="document.getElementById('changeStyle').style.fontSize='28px'">
+            Click me
+        </button>
+        
+        <h2>Hide and show html content</h2>
+        <hr>
+        <p id="hideContent">You can set Style display to none, which will hide content.</p>
+        <button type="button" onclick="document.getElementById('hideContent').style.display='none'">
+            Hide content
+        </button>
+        <button type="button" onclick="document.getElementById('hideContent').style.display='block'">
+            Show content
+        </button>
+        
+        <h2>Javascript in &lt;head&gt;</h2>
+        <hr>
+        <p id="changeContentInHead">Onclick Function in head</p>
+        <button type="button" 
+            onclick="changeContent('changeContentInHead','Change!Change!')">
+            Click me
+        </button>
+
+        <h2>Javascript in &lt;body&gt;</h2>
+        <hr>
+        <p id="changeContentInBody">Onclick function in body</p>
+        <button type="button" onclick="changeContentInBody('changeContentInBody','switch!switch!')">
+            Click me
+        </button>
+        <script>
+            function changeContentInBody(id, content) {
+                document.getElementById(id).innerHTML = content
+            }
+        </script>
+
+        <h2>Javascript in external file</h2>
+        <hr>
+        <p id="changeContentInExternal">Onclick function in external file.</p>
+        <button type="button" onclick="externalFunction('changeContentInExternal','external!external!')">
+            Click me
+        </button>
+        <script src="Day1-20-May-2023.js"></script>
+        <p>It's also used in url and external file.</p>
+
+        <h2>Window alert</h2>
+        <hr>
+        <button type="button" onclick="window.alert('Knock!Knock!')">
+            Knock me
+        </button>
+
+        <h2>Console log</h2>
+        <hr>
+        <p>Press F12 to see console log</p>
+        <script>
+            console.log('Hello!')
+        </script>
+
+        <h2>Variable undefine</h2>
+        <hr>
+        <p>empty variable is : </p>
+        <p id="emptyVar"></p>
+        <script>
+            let empty;
+            document.getElementById("emptyVar").innerHTML = empty;
+        </script>
+
+        <h2>Re-define variable</h2>
+        <hr>
+        <p id="redefineVar"></p>
+        <script>
+            var var1 = "don't use var to define variable";
+            var var1;
+            document.getElementById("redefineVar").innerHTML = var1;
+        </script>
+
+        <h2>String and number gether</h2>
+        <hr>
+        <p>let remix = "5" + 2 + 3 will return :</p>
+        <p id="string_number">let remix = "5" + 2 + 3 will return :</p>
+        <script>
+            let remix = "5" + 2 + 3;
+            document.getElementById("string_number").innerHTML = remix;    
+        </script>
+    </body>
+</html>

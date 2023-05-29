@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(44, 44, 44);
+    font-family: monospace;
+    color:#d6d5d5;
+    /* text-align: center; */
+}
+h1{
+    color:#f6ff94;
+    text-align: center;
+}
+h2{
+    color:#54bfdd;
+}
+h3{
+    color:#cb9338;
+}
+/* p{
+} */
+

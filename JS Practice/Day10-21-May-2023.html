@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day2-21-May-2023</title>
+        <link rel="stylesheet" href="../HTML Practice/publicStyle.css">
+    </head>
+    <body>
+        <h3>Find num in array</h3>
+        <hr>
+        <p id="arrNum"></p>
+        
+        <h3>Find personal detail in object</h3>
+        <hr>
+        <p id="objPerson"></p>
+        
+        <h3>Get the variable type</h3>
+        <hr>
+        <p id="varGetType"></p>
+
+
+        <script>
+            let num = [1,2,3]
+            document.getElementById("arrNum").innerHTML = 
+                `Index 0 is ${num[0]}`;
+            
+            let obj = {
+                Name : "Tian",
+                Age : 25,
+                Tel : "0800080080"
+            }
+            document.getElementById("objPerson").innerHTML = 
+                `Name : ${obj["Name"]}, Age : ${obj["Age"]}, Tel : ${obj["Tel"]}`
+            
+            document.getElementById("varGetType").innerHTML = 
+                `"" is ${typeof ""} <br>
+                "YOYOYO" is ${typeof "YOYOYOYO"} <br>
+                3.0 is ${typeof 3.0} <br>
+                3 is ${typeof 3} <br>
+                0 is ${typeof 0} <br>
+                (3.14) is ${typeof (3.14)} <br>
+                `
+
+            
+        </script>
+    </body>
+</html>

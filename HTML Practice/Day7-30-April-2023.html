@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Link Colors</title>
+        <style>
+            a:link,a:active{
+                color:#1cbad6;
+                padding: 12px 36px;
+                background-color: #272727;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover{
+                color:#858585;                
+                background-color: #bababa;
+                text-decoration: underline;
+            }
+            a:visited{
+                color:#000000;
+                background-color: #ff6d6d;
+            }
+            img{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Link Colors</h1>
+        <h2>state</h2>
+        <hr>
+        <li>link</li>
+        <li>visited</li>
+        <li>hover</li>
+        <li>active</li>
+        <br>
+        <div>
+            <a href="Day6-23-April-2023.html" target="_blank">Click me.</a>
+        </div>
+        <h1>Bookmark</h1>
+        <p>Bookmark can jump to the title your setting.</p>
+        <p>You must set href in a tag and id in jump title tag.</p>
+        <p>
+            <a href="#Day2">Jump to Day 2</a>
+        </p>
+        <p>
+            <a href="#Day5">Jump to Day 5</a>
+        </p>
+        <p>
+            <a href="Day6-23-April-2023.html#padding">Jump to another page's bookmark</a>
+        </p>
+        <hr>
+        <h2 id="Day1">Day 1</h2>
+        <p>Today is Day 1.</p>
+        <h2 id="Day2">Day 2</h2>
+        <p>Today is Day 2.</p>
+        <h2 id="Day3">Day 3</h2>
+        <p>Today is Day 3.</p>
+        <h2 id="Day4">Day 4</h2>
+        <p>Today is Day 4.</p>
+        <h2 id="Day5">Day 5</h2>
+        <p>Today is Day 5.</p>
+        <h2 id="Day6">Day 6</h2>
+        <p>Today is Day 6.</p>
+        <h2 id="Day7">Day 7</h2>
+        <p>Today is Day 7.</p>
+        <h2>Day 8</h2>
+        <p>Today is Day 8.</p>
+        <h2>Day 9</h2>
+        <p>Today is Day 9.</p>
+        <h2>Day 10</h2>
+        <p>Today is Day 10.</p>
+        <h2>Day 11</h2>
+        <p>Today is Day 11.</p>
+        <h2>Day 12</h2>
+        <p>Today is Day 12.</p>
+        <h1>Image</h1>
+        <hr>
+        <h2>Witdh & Height</h2>
+        <p>Setting image with style.</p>
+        <img src="../picture/foster-lake.jpg" alt="This is foster lake"
+        style="width:200px; height: 150px;">
+        <p>Setting image with attribute.</p>
+        <img src="../picture/foster-lake.jpg" alt="This is a dom."
+        width="200px" height="150px">
+        <p>The different between the two is that style won't override, but attribute do.</p>
+        <p>Img tag can support animated image.</p>
+        <img src="../picture/cute.gif" alt="There are cute character."
+        style="width: 100px; height: 100px;">
+        <p>If you want use image with link, wrap img into a tag.</p>
+        <a href="#">
+            <img src="../picture/click.jpg" alt="Click me"
+            style="width: 50px; height: 70px;">
+        </a>
+        <h2>Image floating</h2>
+        <hr>
+        <p><strong>Left</strong></p>
+        <p>
+            <img src="../picture/cute.gif" alt="There are cute characters."
+            style="float:left;width: 100px; height: 100px">
+            Hi! I'm Paggy. How are you? <br> 
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+        </p>
+        <p><strong>Right</strong></p>
+        <p>
+            <img src="../picture/cute.gif" alt="There are cute characters."
+            style="float:right; width:100px; height:100px">
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+            Hi! I'm Paggy. How are you? <br>
+        </p>
+    </body>
+</html>

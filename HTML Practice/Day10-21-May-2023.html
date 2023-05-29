@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day10-21-May-2023</title>
+        <link rel="icon" type="image/x-icon" href="../picture/laptop.ico">
+        <link rel="stylesheet" href="publicStyle.css">
+        <style>
+            thead {
+                color : #4d4d4d;
+            }
+            tbody {
+                color : #bf9b31;
+            }
+            tfoot {
+                color : #0ca7a4;
+            }
+            table, th, td {
+                border: 1px solid rgb(0, 0, 0);
+            }
+            .table-border-less,.td-border-less,.th-border-less{                
+                border: 1px solid rgb(255, 255, 255);
+                border-collapse: collapse;
+            }
+            .tr-zebra:nth-child(even), .td-zebra:nth-child(even),
+            .th-zebra:nth-child(even){
+                background-color: #d3d3d3;
+            }
+            .td-border-less,.th-border-less{
+                background-color: #dbfcb7;
+            }
+            .tr-round{
+                border: 1px solid black;
+                border-radius: 5px;
+                border-color:#32c6bc;
+            }
+            .table-underLine{
+                border-collapse: collapse;
+                border: 1px solid rgb(255, 255, 255);
+            }
+            .tr-underLine{
+                border-bottom: 1px solid rgb(255, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Favicon</h1>
+        <h2>Set your website icon</h2>
+        <hr>
+        <p>Set the below tag in &lt;head&gt; <br> 
+            &lt;link rel="icon" type="image/x-icon" href="YOUR_PATH"&gt;
+        </p>
+        
+        <h1>Title</h1>
+        <h2>Set your website title</h2>
+        <hr>
+        <p>Set the below tag in &lt;head&gt; <br>
+            &lt;title&gt;YOUR_TITLE&lt;/title&gt;
+        </p>
+
+        <h1>Table</h1>
+        <h2>Make some table yourself</h2>
+        <hr>
+        <table style="width:100%">
+            <caption>This is caption for the table</caption>
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+            <tr>
+                <td>Content4</td>
+                <td>Content5</td>
+                <td>Content6</td>
+            </tr>
+        </table>
+        <p>In addition to set table, also set border in &lt;head&gt; <br>
+            &lt;th&gt; and &lt;td&gt; is the cell in &lt;tr&gt; <br>
+            Those can be composed a row. <br>
+            &lt;th&gt; means table header. <br>
+            &lt;td&gt; means table data. <br>
+            &lt;tr&gt; means table row. <br>
+            You can also use &lt;caption&gt to display caption;
+        </p>
+        <hr>
+
+        <!-- Colspan  -->
+        <h3>Colspan</h3>
+        <table style="width:100%">
+            <caption>&lt;colspan&gt;</caption>
+            <tr>
+                <th colspan="2">Title1</th>
+                <th>Title2</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+            <tr>
+                <td>Content4</td>
+                <td>Content5</td>
+                <td>Content6</td>
+            </tr>
+        </table>
+        <p>You can merge col by colspan attribute.</p>
+        <hr>
+        
+        <!-- Rowspan -->
+        <h3>Rowspan</h3>
+        <table style="width:100%">
+            <caption>&lt;rowspan&gt;</caption>
+            <tr>
+                <th>Title1</th>
+                <td>Content1</td>
+            </tr>
+            <tr>
+                <th>Title2</th>
+                <td>Content2</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Title3</th>
+                <td>Content3-1</td>
+                <td>Content3-2</td>
+            </tr>
+            <tr>
+                <td>Content4-1</td>
+                <td>Content4-2</td>
+            </tr>
+        </table>
+        <p>You can merge row by rowspan</p>
+        <hr>
+
+        <!-- Colgroup -->
+        <h3>Colgroup</h3>
+        <table style="width:100%">
+            <colgroup>
+                <col span="2" style="background-color:#c2fffe">
+                <col style="background-color: #e4e4e4;">
+            </colgroup>
+            <caption>&lt;colgroup&gt;</caption>
+            <tr>
+                <th>Title1</th>
+                <td>Content1</td>
+            </tr>
+            <tr>
+                <th>Title2</th>
+                <td>Content2</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Title3</th>
+                <td>Content3-1</td>
+                <td>Content3-2</td>
+            </tr>
+            <tr>
+                <td>Content4-1</td>
+                <td>Content4-2</td>
+            </tr>
+        </table>
+        <p>You can use &lt;colgroup&gt; to group by each col.</p>
+        <hr>
+
+        <!-- thead / tbody / tfoot -->
+        <h3>t- tag</h3>
+        <table style="width:100%">
+            <caption>&lt;thead&gt; &lt;tbody&gt; &lt;tfoot&gt</caption>
+            <thead>
+                <tr>
+                    <th>Title1</th>
+                    <th>Title2</th>
+                    <th>Title3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Content1</td>
+                    <td>Content2</td>
+                    <td>Content3</td>
+                </tr>
+                <tr>
+                    <td>Content4</td>
+                    <td>Content5</td>
+                    <td>Content6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Content7</td>
+                    <td>Content8</td>
+                    <td>Content9</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>If you set these tag in &lt;head&gt; other tables will be set as same as tbody.</p>
+
+        <table style="width:100%; border-collapse:collapse;">
+            <caption>&lt;thead&gt; &lt;tbody&gt; &lt;tfoot&gt</caption>
+                <tr>
+                    <th>Title1</th>
+                    <th>Title2</th>
+                    <th>Title3</th>
+                </tr>
+                <tr>
+                    <td>Content1</td>
+                    <td>Content2</td>
+                    <td>Content3</td>
+                </tr>
+                <tr>
+                    <td>Content4</td>
+                    <td>Content5</td>
+                    <td>Content6</td>
+                </tr>
+                    <td>Content7</td>
+                    <td>Content8</td>
+                    <td>Content9</td>
+                </tr>
+        </table>
+        <hr>
+
+        <!-- Border-less -->
+        <h3>Border-less</h3>
+        <table class="table-border-less" style="width:100%;">
+            <caption>Border-less table</caption>
+            <tr>
+                <th class="th-border-less">Title1</th>
+                <th class="th-border-less">Title2</th>
+                <th class="th-border-less">Title3</th>
+            </tr>
+            <tr>
+                <td class="td-border-less">Content1</td>
+                <td class="td-border-less">Content2</td>
+                <td class="td-border-less">Content3</td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- Round border -->
+        <h3>Round border</h3>
+        <table style="width:100%; border-radius: 5px;">
+            <caption>Round table</caption> 
+            <tr>
+                <th class="tr-round">Title1</th>
+                <th class="tr-round">Title2</th>
+                <th class="tr-round">Title3</th>
+            </tr>
+            <tr>
+                <td class="tr-round">Content1</td>
+                <td class="tr-round">Content2</td>
+                <td class="tr-round">Content3</td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- Column width -->
+        <h3>Column width</h3>
+        <table style="width:100%">
+            <caption>Column Width</caption>
+            <tr>
+                <th style="width:50%">Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+        </table>
+        <p>Title1 width is</p>
+        <hr>
+
+        <!-- Row height -->
+        <h3>Row height</h3>
+        <table style="width:100%">
+            <caption>Row Height</caption>
+            <tr style="height:50px">
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- text-align -->
+        <h3>text-align</h3>
+        <table style="width:100%;">
+            <caption>&lt;th&gt; text-align</caption>
+            <tr>
+                <th style="text-align: right;">Title1</th>
+                <th>Title2</th>
+                <th style="text-align: left;">Title3</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+        </table>
+        <hr>
+        
+        <!-- Padding & Spacing -->
+        <h3>Padding & Spacing</h3>
+        <table style="border-spacing: 20px; width:100%;">
+            <caption>Padding & Spacing</caption>
+            <tr>
+                <th style="padding:15px;">Title1</th>
+                <th style="padding-top:15px; padding-left: 30px;
+                        padding-bottom: 0px; padding-right: 0px;">Title2</th>
+                <th>Title3</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- Practice -->
+        <h3>Practice</h3>
+        <table style="width:100%">
+            <caption>Colspan & Rowspan practice</caption>
+            <tr>
+                <th colspan="2">Title1</th>
+                <th>Title2</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+            <tr>
+                <!-- <td>Content4</td> -->
+                <td>Content5</td>
+                <td>Content6</td>
+            </tr>
+            <tr>
+                <td>Content7</td>
+                <td rowspan="2" colspan="2">Content8</td>
+                <!-- <td>Content9</td> -->
+            </tr>
+            <tr>
+                <td>Content10</td>
+                <!-- <td>Content11</td>
+                <td>Content12</td> -->
+            </tr>
+        </table>
+        <hr>
+
+        <!-- nth-child -->
+        <h3>nth-child</h3>
+        <table style="width:100%">
+            <caption>Zebra Stripe</caption>
+            <tr class="tr-zebra" >
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+            </tr>
+            <tr class="tr-zebra">
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+            <tr class="tr-zebra">
+                <td>Content4</td>
+                <td>Content5</td>
+                <td>Content6</td>
+            </tr>
+            <tr class="tr-zebra">
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+            </tr>
+        </table>
+        <br>
+        <table style="width:100%">
+            <tr>
+                <th class="th-zebra">Title1</th>
+                <th class="th-zebra">Title2</th>
+                <th class="th-zebra">Title3</th>
+                <th class="th-zebra">Title4</th>
+            </tr>
+            <tr>
+                <td class="td-zebra">Content1</td>
+                <td class="td-zebra">Content2</td>
+                <td class="td-zebra">Content3</td>
+                <td class="td-zebra">Content3</td>
+            </tr>
+            <tr>
+                <td class="td-zebra">Content4</td>
+                <td class="td-zebra">Content5</td>
+                <td class="td-zebra">Content6</td>
+                <td class="td-zebra">Content6</td>
+            </tr>
+            <tr>
+                <td class="td-zebra">Content7</td>
+                <td class="td-zebra">Content8</td>
+                <td class="td-zebra">Content9</td>
+                <td class="td-zebra">Content9</td>
+            </tr>
+        </table>
+        <br>
+
+        <table style="width:100%">
+            <tr class="tr-zebra">
+                <th class="th-zebra">Title1</th>
+                <th class="th-zebra">Title2</th>
+                <th class="th-zebra">Title3</th>
+                <th class="th-zebra">Title4</th>
+            </tr>
+            <tr class="tr-zebra">
+                <td class="td-zebra">Content1</td>
+                <td class="td-zebra">Content2</td>
+                <td class="td-zebra">Content3</td>
+                <td class="td-zebra">Content3</td>
+            </tr>
+            <tr class="tr-zebra">
+                <td class="td-zebra">Content4</td>
+                <td class="td-zebra">Content5</td>
+                <td class="td-zebra">Content6</td>
+                <td class="td-zebra">Content6</td>
+            </tr>
+            <tr class="tr-zebra">
+                <td class="td-zebra">Content7</td>
+                <td class="td-zebra">Content8</td>
+                <td class="td-zebra">Content9</td>
+                <td class="td-zebra">Content9</td>
+            </tr>
+        </table>
+        <br>
+        
+        <table class="table-underLine" style="width:100%;">
+            <tr class="tr-underLine">
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+                <th>Title4</th>
+            </tr>
+            <tr class="tr-underLine">
+                <td>Content1</td>
+                <td>Content3</td>
+                <td>Content2</td>
+                <td>Content3</td>
+            </tr>
+            <tr class="tr-underLine">
+                <td>Content4</td>
+                <td>Content5</td>
+                <td>Content6</td>
+                <td>Content6</td>
+            </tr>
+            <tr class="tr-underLine">
+                <td>Content7</td>
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>

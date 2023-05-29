@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day9-20-May-2023</title>
+        <link rel="stylesheet" href="publicStyle.css">
+        <style>
+            p {
+                color: azure;
+                background-image: url("../picture/future-bg-02.jpg");
+            }
+            body {
+                background-image: url("../picture/body-bg-2.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-attachment: fixed;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <h1>Background image</h1>
+        <h2>At p tag</h2>
+        <hr>
+        <p style="background-image: url('../picture/future-bg.jpg');
+                color: azure;">
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+                There's a background image.<br>
+        </p>
+        <p>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+            There's a background image.<br>
+        </p>
+        <h2>Picture tag</h2>
+        <hr>
+        <p>If your website want to adapt different devices, the best way is to used picture tag.<br>
+            This can specify different pictures to different devices.<br>
+        </p>
+        <p>
+            You have to used meta tag and set name to viewport which make your picture tag adapt to different devices in head tag.  <br>
+            also set content to width=device-width.
+        </p>
+        <picture>
+            <source media="(min-width: 600px)" srcset="../picture/biker_equipment.jpg" width="100%">
+            <source media="(min-width: 400px)" srcset="../picture/foster-lake.jpg" width="100%">
+            <img src="../picture/cute.gif" alt="cute character" width="auto">
+        </picture>
+        
+    </body>
+</html>

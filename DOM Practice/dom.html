@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="tv_h1">tv shows</h1>
+<ul class="list">
+    <li>A1</li>
+    <li>B1</li>
+    <li>C1</li>
+    <li>D1</li>
+</ul>
+<ul class="list2">
+    <li>A2</li>
+    <li>B2</li>
+    <li>C2</li>
+    <li>D2</li>
+</ul>
+<h1>Reason i go there:</h1>
+
+<button id="btn">
+    Press Me
+</button>
+
+<script>
+    const h1Element = document.getElementById("tv_h1")
+    const classElement = document.querySelector(".list")
+    const ulElement = document.querySelector("ul")
+    const ulAllElement = document.querySelectorAll("ul")
+    const allElement = document.querySelectorAll("ul > li")
+    // console.log(h1Element)
+    // console.log(classElement)
+    // console.log(ulElement)
+    ulAllElement.forEach((i)=>{
+        console.log(i)
+    })
+    console.log(ulAllElement)
+
+    // console.log(allElement);
+    allElement.forEach((item) => {
+        // console.log(item);
+    })
+    
+    let unorderList = document.createElement("ul")
+    document.body.appendChild(unorderList)
+
+    let listItem1 = document.createElement("li")
+    let listItem2 = document.createElement("li")
+    let listItem3 = document.createElement("li")
+    listItem1.textContent = "It's free"
+    listItem2.textContent = "It's awesome"
+    listItem3.textContent = "but it won't execuate first"
+    unorderList.appendChild(listItem1)
+    unorderList.appendChild(listItem2)
+    unorderList.appendChild(listItem3)
+    //this can change first tag only
+    // const h1 = document.querySelector("h1")
+    // h1.style.color = "red"
+    // h1.style.backgroundColor = "black"
+
+    //this is how to change all H1 tags
+    const allH1 = document.querySelectorAll("h1")
+    allH1.forEach(h1 => h1.style.color = "red") 
+    
+    //get btn content
+    const alert_btn = document.getElementById("btn")
+    alert_btn.addEventListener("click",() => {
+        alert("You press the button and show alert");
+    })
+</script>
+
+
+
+</body>
+</html>

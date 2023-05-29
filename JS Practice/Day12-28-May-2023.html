@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Practice Day12-28-May-2023</title>
+        <link rel="stylesheet" href="../HTML Practice/publicStyle.css">
+    </head>
+    <body>
+        <h1>Javascript Objects</h1>
+
+        <h2>Variable</h2>
+        <hr>
+        <p id="var"></p>
+        
+        <h2>Object</h2>
+        <hr>
+        <p>person.name</p>
+        <p id="obj"></p>
+
+        <h2>Access way to Object</h2>
+        <hr>
+        <p>person.name and person["age"]</p>
+        <p id="twoWayObj"></p>
+
+        <h2>Object is a function</h2>
+        <hr>
+        <p>obj: function(){ return .... }</p>
+        <p id="funcObj"></p>
+        <p>If you forgot use ().It will return like this</p>
+        <p id="noBracketFuncObj"></p>
+        <script>
+            let name = "Tian"
+            let person = {
+                firstName: "Tian",
+                lastName: "Paddy",
+                age: 20,
+                height: 175,
+                favor: "Ramen",
+                fullName: function(){
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            document.getElementById("var").innerHTML = name;
+            document.getElementById("obj").innerHTML = 
+                `Name:${person.firstName}\tAge:${person.age}\tFavor:${person.favor}`;
+            document.getElementById("twoWayObj").innerHTML =
+                `My name is ${person.firstName} and ${person["age"]} years old.`;
+            document.getElementById("funcObj").innerHTML =
+                `My full name is ${person.fullName()}!`;
+            document.getElementById("noBracketFuncObj").innerHTML = person.fullName;
+        </script>
+
+
+        <!-- Javascript Function -->
+        <h1>Javascript Function</h1>
+        
+        <h2>Simple one</h2>
+        <hr>
+        <button onclick="showMsg()">Click me</button>
+        <p id="simpleFunc"></p>
+
+        <h2>With argument</h2>
+        <hr>
+        <button onclick="showMsgArgu('Tian')">Click me</button>
+        <p id="withArgu"></p>
+
+        <h2>Return value with two button</h2>
+        <hr>
+        <form>
+            <input type="button" onclick="showMsgArgu2('Bob')" value="You're Bob">
+            <input type="button" onclick="showMsgArgu2('Fang')" value="You're Fang">
+        </form>
+        <p id="returnValue"></p>
+        <script>
+            let msg = "Hi! How are you?";
+            function showMsg(){
+                document.getElementById("simpleFunc").innerHTML = msg;
+            }
+            function showMsgArgu(name){
+                document.getElementById("withArgu").innerHTML = `${msg} ${name}`;
+            }
+            
+            function showMsgArgu2(name){
+                document.getElementById("returnValue").innerHTML = `${msg} ${name}`;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <style >
+            body
+            {
+                background-color: rgb(255, 255, 226);
+            }
+            h1
+            {
+                color: RGB(150,225,150);
+                text-align: center;
+            }
+            h2 
+            {
+                color: RGB(0,120,240);
+            }            
+            h1,h2,h3,h4,a
+            {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="Day6-23-April-2023.css">
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <h2>Inline style</h2>
+        <hr>
+        <p>When setting a tag style, you could use tag attribute.</p>
+        <p style="color:RGB(0,120,120)">Like This Way. Style="color:YOUR_COLOR"</p>
+        <h2>Internal style</h2>
+        <hr>
+        <p>The internal setting is located in head tag.</p>
+        <p>
+            &lt;head&gt; <br>           
+                &lt;style&gt; <br>
+                h2 {color: RGB(0,120,240);} <br>   
+                &lt;/style&gt;
+                <br>    
+            &lt;/head&gt;
+        </p>
+        <h2>External style</h2>
+        <hr>
+        <p>The External style has similarities with internal.</p>
+        <p>Also set in the head tag. But there is a separate file called css.</p>
+        <p>And the tag is &lt;link&gt;</p>
+        <p>The font-family style used by p tag is the external style.</p>
+        <h2>Border</h2>
+        <hr>
+        <p style="border: 1px solid sandybrown;">This is Border</p>
+        <p style="border: 1px dotted sandybrown;">Dotted Border</p>
+        <p style="border: 1px dashed sandybrown;">Dashed Border</p>
+        <p style="border: 1px double sandybrown;">Double Border</p>
+        <h2 id="padding">Padding</h2>
+        <hr>
+        <p style="border: 1px solid sandybrown;
+                  padding: 15px;
+        ">This is padding(space).<br> Padding into border.</p>
+        <h2>Margin</h2>
+        <hr>
+        <p style="border: 1px solid sandybrown;
+                  margin:15px;
+        ">This is Margin <br>Margin fills the border.  </p>
+        <h2>Another way to use External</h2>
+        <hr>
+        <p>You can setting herf with the web path.</p>
+        <p>
+            &lt;link rel="stylesheet" herf="https://example.com/style.css"&gt;
+        </p>
+        <h1>LINK</h1>
+        <h2>Tag &lt;a&gt;</h2>
+        <hr>
+        <p><a href="https://www.google.com">Click me to google page.</a> </p>
+        <h4>Target="_self"</h4>
+        <p><a href="https://www.google.com" target="_self">Open the document in the same tab as it clicked.</a> </p>
+        <h4>Target="_blank"</h4>
+        <p><a href="https://www.google.com" target="_blank">Open the document in the new tab as it clicked.</a> </p>
+        <h4>Target="_parent"</h4>
+        <p><a href="https://www.google.com" target="_parent">Open the document in the parent tab as it clicked.</a> </p>
+        <h4>Target="_top"</h4>
+        <p><a href="https://www.google.com" target="_top">Open the document in the full tab as it clicked.</a> </p>
+        <h4>Relative Path</h4>
+        <p><a href="Day5-16-April-2023.html">This is relative path to local file.</a></p>
+        <h4>Image link:</h4>
+        <a href="https://www.youtube.com">
+            <img src="https://th.bing.com/th/id/R.d615fcb54c8d0bc5d367cbba04bb8610?rik=fVRj7cvbxAp9TA&pid=ImgRaw&r=0" 
+            alt="youtube icon" width="100px" height="80px" title="Go to youtube!">
+        </a>
+        <h4>Info:</h4>
+        <p><a href="mailto:q135135c@yahoo.com.tw">Contact me by Email</a></p>
+        <h4>Button:</h4>
+        <button onclick="document.location='Day5-16-April-2023.html'">Click me to new page</button>
+    </body>
+</html>
