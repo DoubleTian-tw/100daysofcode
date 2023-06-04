@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day14-4-June-2023</title>
+        <link rel="stylesheet" href="/HTML Practice/publicStyle.css">
+        <script>
+            function functionAtHead(){
+                document.getElementById("Demo").innerHTML = "Hi, I'm a function at the head.";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <h2>Where can &lt;script&gt; be placed?</h2>
+        <hr>
+        <p id="Demo">You can place it in &lt;head&gt; and &lt;body&gt;</p>
+        <button onclick="functionAtHead()">Click me</button>
+        <br>
+        <br>
+        <button onclick="functionAtBody()">Click me</button>
+        <script>
+            function functionAtBody(){
+                document.getElementById("Demo").innerHTML = "Hi, I'm a function at the body.";
+            }
+        </script>
+        <h2>How is exteral file works?</h2>
+        <hr>
+        <p>You can use &lt;script&gt; with src attribute.</p>
+        <p>Like &lt;script src="YOUR_FILE.js"&gt;</p>
+        <p>It have some advantages on external file.</p>
+        <ul>
+            <li>Separates with html and css.</li>
+            <li>Easy to read and maintain.</li>
+            <li>Speed up loads pages.</li>
+        </ul>
+
+        <h2>How to display data?</h2>
+        <hr>
+        <ul>
+            <li>innerHTML - write into the html element.</li>
+            <li>document.write() - write into the html output.</li>
+            <li>window.alert() - write into the alert box, which will pop up.</li>
+            <li>console.log() - write into the console for test, it won't display on page.</li>
+        </ul>
+        <p id="innerHTML"></p>
+        <p>Using document.write() after the page is loading, whole page will be delete.</p>
+        <button onclick="documentWrite()">document.write()</button>
+        <p></p>
+        <script>
+            document.getElementById("innerHTML").innerHTML = "I was output by innerHTML.";
+            document.write("I was output by write().");
+            function documentWrite(){
+                document.write("See? I told you! Press F5 back to page.");
+            }
+        </script>
+    </body>
+</html>

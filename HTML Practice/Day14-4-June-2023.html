@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day14-4-June-2023.html</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Practice,HTML,CSS,Javascript,Journey">
+        <meta name="description" content="100daysofcode">
+        <meta http-equiv="refresh" content="10">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <base href="Https://" target="_blank"> -->
+        <link rel="stylesheet" href="publicStyle.css">
+        <style>
+            img {
+                max-width:100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Iframe</h1>
+
+        <h2>Use &lt;iframe&gt; tag</h2>
+        <hr>
+        <p>It's a page that contains another page.</p>
+        <p>You could set style and border for it.</p>
+        <h3>With border.</h3>
+        <iframe src="Day12-28-May-2023.html" title="Day12-100dayofcode" frameborder="0"
+                style="height:300px;width:600px;border: 1px solid #ffffff;">
+        </iframe>
+
+        <h3>Without border.</h3>
+        <iframe src="Day12-28-May-2023.html" title="Day12-100dayofcode" frameborder="0"
+        style="height:300px;width:600px;border:none;">
+        </iframe>
+
+
+        <h3>Set target for link</h3>
+        <p><a href="github.com/DoubleTian-tw" target="iframe_target">
+            -> Go to my github page.
+        </a></p>
+        <iframe src="Day12-28-May-2023.html" title="Day12-100dayofcode" frameborder="0"
+                style="height:300px;width:600px;border: 1px solid #ffffff;"
+                name="iframe_target">
+        </iframe>
+
+        <h1>Javascript</h1>
+
+        <h2>&lt;noscript&gt;</h2>
+        <hr>
+        <p>Noscript indicates that current browser doesn't support Javascript.<br>
+            And it will prompt the users.
+        </p>
+            <noscript>Sorry! Your browser doesn't support Javascript.</noscript>
+        </body>
+
+        <h1>File Path</h1>
+
+        <h2>Relative path</h2>
+        <hr>
+        <h3>The file is locate in the same folder</h3>
+        <p>src="Day12-28-May-2023.html"</p>
+        <iframe src="Day12-28-May-2023.html" title="Day12-100dayofcode" frameborder="0"
+            style="height:200px;width:500px;border: 1px solid #ffffff;">
+        </iframe>
+
+        <h3>The file is locate in the test folder in the current folder</h3>
+        <p>src="test/cute.gif"</p>
+        <img src="test/cute.gif" style="height:100px;width:100px" alt="cute character">
+
+        <h3>The file is locate in the picture folder at the root of current web.</h3>
+        <p>src="/picture/cute.gif"</p>
+        <img src="/picture/cute.gif" style="height:100px;width:100px" alt="cute character">
+
+        <h3>The file is locate in the folder one level up from the current folder.</h3>
+        <p>src="../picture/cute"</p>
+        <img src="../picture/cute.gif" style="height:100px;width:100px" alt="cute character">
+
+        <h1>Head Element</h1>
+        <h2>&lt;meta&gt;</h2>
+        <hr>
+        <p>Here are some list of meta</p>
+        <ol>
+            <li>Character set</li>
+            <ul style="list-style-type: none;">
+                <li>&lt;mata charset="UTF-8"&gt;</li>
+            </ul>
+            <li>Define keyword for search engines</li>
+            <ul style="list-style-type: none;">
+                <li>&lt;meta name="keywords" content="100daysofcode"&gt;</li>
+                <li>- Google don't use anymore</li>
+                <li>- You can use description instead keywords.</li>
+            </ul>
+            <li>Define description for your web</li>
+            <ul style="list-style-type: none;">
+                <li>&lt;meta name="description" content="100daysofcode"&gt;</li>
+            </ul>
+            <li>Define author for your web.</li>
+            <ul style="list-style-type:none">
+                <li>&lt;meta name="author" content="Tian"&gt;</li>
+            </ul>
+            <li>Refresh your website for specify times.</li>
+            <ul style="list-style-type:none">
+                <li>&lt;meta http-equiv="refresh" content="30"&gt;</li>
+                <li>- content represent times(second)</li>
+            </ul>
+            <li>Fit your website on different device.</li>
+            <ul style="list-style-type:none">
+                <li>You can switch between different types of devices on F12.</li>
+            </ul>
+        </ol>
+        <img src="/picture/DOM.jpg" style="width:500px;height:300px" alt="It's a DOM.">
+        
+        <h2>&lt;Base&gt;</h2>
+        <hr>
+        <p>This is use on every tag which with src attribute.</p>
+</html>
