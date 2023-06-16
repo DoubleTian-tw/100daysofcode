@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day-May-27-2023</title>
+        <link rel="stylesheet" href="../css/global.css">
+        <style>
+            table,th,td {
+                border: 1px solid #ffffff;
+                border-collapse: collapse;
+                color: white;                
+            }
+            #Navi_ul {
+                list-style-type: none; 
+                margin:0px; 
+                padding:0px;
+                overflow: hidden; 
+                        background-color: #88c5fe;
+            }   
+            .Navi_li {
+                float: left;
+            }
+            .Navi_a {
+                color: white; 
+                display: block;
+                padding: 16px;                
+                text-align: middle;
+                text-decoration: none;
+            }         
+            .Navi_a:hover{
+                background-color: #75ace0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Colgroup</h1>
+
+        <h2>colgroup</h2>
+        <hr>
+        <p>Use colgroup, col and span to group your columns.</p>
+        <table width="100%">
+            <caption>This span over two columns for the table.</caption>
+            <colgroup>
+                <col span="2" style="background-color: #a76767">
+            </colgroup>
+
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+                <th>Title4</th>
+                <th>Title5</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+                <td>Content4</td>
+                <td>Content5</td>
+            </tr>            
+            <tr>
+                <td>Content6</td>
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+                <td>Content10</td>
+            </tr>
+            
+        </table>
+
+        <br>
+        <p>Multiple columns</p>
+        <table width="100%">
+            <caption>This span over two columns and a columns for the table.</caption>
+            <colgroup>
+                <col span="2" style="background-color: #a76767">
+                <col span="1" style="background-color: #a76780">
+            </colgroup>
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+                <th>Title4</th>
+                <th>Title5</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+                <td>Content4</td>
+                <td>Content5</td>
+            </tr>
+            <tr>
+                <td>Content6</td>
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+                <td>Content10</td>
+            </tr>
+        
+        </table>
+
+        <br>
+        <p>Empty columns</p>
+        <table width="100%">
+            <caption>This columns style in middle of table. </caption>
+            <colgroup>
+                <col span="2">
+                <col span="1" style="background-color: #a76780">
+            </colgroup>
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+                <th>Title4</th>
+                <th>Title5</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+                <td>Content4</td>
+                <td>Content5</td>
+            </tr>
+            <tr>
+                <td>Content6</td>
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+                <td>Content10</td>
+            </tr>
+        
+        </table>
+
+        <br>
+        <p>Hide columns</p>
+        <table width="100%">
+            <caption>This attribute can hide some columns in the table.</caption>
+            <colgroup>
+                <col span="2" style="background-color: #a76780">
+                <col span="2" style="visibility: collapse;">
+            </colgroup>
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+                <th>Title4</th>
+                <th>Title5</th>
+            </tr>
+            <tr>
+                <td>Content1</td>
+                <td>Content2</td>
+                <td>Content3</td>
+                <td>Content4</td>
+                <td>Content5</td>
+            </tr>
+            <tr>
+                <td>Content6</td>
+                <td>Content7</td>
+                <td>Content8</td>
+                <td>Content9</td>
+                <td>Content10</td>
+            </tr>
+        
+        </table>
+        
+        <h1>List</h1>
+
+        <!-- Unorder List -->
+        <h2>Unorder List</h2>
+        <hr>
+        <p>Unorder list is compose of bullets.</p>
+        <p>And it use &lt;ul&gt; tag.</p>
+        <ul>
+            <li>Bullet1</li>
+            <li>Bullet2</li>
+            <li>Bullet3</li>
+        </ul>
+        <p>Different type of mark</p>
+        <h3>- Default</h3>
+        <ul style="list-style-type:disc">
+            <li>default mark(bullet)</li>
+            <li>default mark(bullet)</li>
+            <li>default mark(bullet)</li>
+        </ul>
+        <h3>-Circle</h3>
+        <ul style="list-style-type:circle">
+            <li>Circle mark</li>
+            <li>Circle mark</li>
+            <li>Circle mark</li>
+        </ul>
+        <h3>- Square</h3>
+        <ul style="list-style-type:square">
+            <li>Square mark</li>
+            <li>Square mark</li>
+            <li>Square mark</li>
+        </ul>
+        <h3>- None</h3>
+        <ul style="list-style-type:none">
+            <li>None mark</li>
+            <li>None mark</li>
+            <li>None mark</li>
+        </ul>
+        <!-- Nested List -->
+        <h3>Nested List</h3>
+        <ul>
+            <li>Computer</li>
+            <ul>
+                <li>Host</li>
+                <li>Monitor</li>
+                <li>Keyborad</li>
+                <li>Mouse</li>
+            </ul>
+            <li>Clothes</li>
+            <ul>
+                <li>Top</li>
+                <ul>
+                    <li>Shirt</li>
+                    <li>coat</li>
+                </ul>                
+                <li>Pants</li>
+                <ul>
+                    <li>Jeans</li>
+                    <li>Straights</li>
+                    <li>Sport Pants</li>
+                </ul>
+                <li>Underwears</li>
+                <ul>
+                    <li>Bras</li>
+                    <li>Panties</li>
+                    <li>Boxers</li>
+                </ul>
+            </ul>
+        </ul>
+        <!-- Navigation List -->
+        <h3>Navigation list</h3>
+        <ul id="Navi_ul">
+            <li class="Navi_li">
+                <a class="Navi_a" href="#" >Home</a>
+            </li>
+            <li class="Navi_li">
+                <a class="Navi_a" href="#" >News</a>
+            </li>
+            <li class="Navi_li">
+                <a class="Navi_a" href="#" >Contact</a>
+            </li>
+            <li class="Navi_li">
+                <a class="Navi_a" href="#" >About</a>
+            </li>            
+        </ul>
+
+
+        <h2>Order List</h2>
+        <hr>
+        <p>Order list is compose of the number.</p>
+        <p>And it use &lt;ol&gt; tag.</p>
+        <ol>
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
+        </ol>
+
+        <h2>Description List</h2>
+        <hr>
+        <p>List order the description of the term.</p>
+        <dl>
+            <dt>Computer</dt>
+            <dd>- Square box</dd>
+            <dt>Monitor</dt>
+            <dd>- Square box</dd>
+        </dl>
+    </body>
+</html>
