@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day15-Responsive Web Design</title>
+        <meta name="viewport" content="width=device-width,initial-sale=1.0">
+        <!-- <link rel="stylesheet" href="/global/global.css"> -->
+        <link rel="stylesheet" href="publicStyle.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .left {
+                padding:20px;
+                float: left;
+                background-color: #1b70bf;
+                width:20%;
+            }
+            .main {
+                padding:20px;
+                float: left;
+                background-color: #565656;
+                width:60%;
+            }
+            .right {
+                padding:20px;
+                float: left;
+                background-color: #e79735;
+                width:20%;
+            }
+            .title {
+                background-color: grey;
+                padding:20px;
+                width: 100%;
+            }
+            .navbar {
+                float:left;
+                text-align: center;
+                width:20%;
+            }
+            .navbar a {
+                background-color: grey;
+                margin-top:5px;
+                padding:10px;
+                display: block;
+            }
+            .main-2{
+                float:left;
+                margin-top:5px;
+                /* margin-bottom:5px; */
+                padding:0 20px;
+                width:60%;
+                /* height:300px; */
+            }
+            .right-about {
+                background-color: grey;
+                margin-top:5px;
+                float: left;
+                padding:20px;
+                text-align: center;
+                width:20%;
+            }
+            @media screen and (max-width:800px) {
+                .left, .main, .right, .navbar, .main-2, .right-about{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>What is RWD?</h1>
+        <hr>
+        <p>RWD is a design pattern that make your website prettier on different device.</p>
+        
+        <h1>How RWD works?</h1>
+        <h2>Responsive Image</h2>
+        <hr>
+        <p>This picture setting is width=100%</p>
+        <img src="/picture/DOM.jpg" alt="This is a dom."  width="100%">
+        <p>This picture setting is max-width=100%</p>
+        <img src="/picture/DOM.jpg" alt="This is a dom." style="max-width:100%; height: auto;">
+        
+        <h2>Showing different pictures depending on device-width.</h2>
+        <hr>
+        <p>When the width is less than 400px, you will see a gif.</p>
+        <p>When the width is between 400px and 800px, you will see a dom.</p>
+        <p>Beside those width, you will see a future view.</p>
+        <picture>
+            <source srcset="/picture/cute.gif" media="(max-width:400px)"> <!--400px以下時顯示-->
+            <source srcset="/picture/DOM.jpg" media="(max-width:800px)"> <!--800px以下時顯示-->
+            <source srcset="/picture/future-bg-02.jpg">  <!--其他px時顯示-->
+            <img src="/picture/future-bg-02.jpg" alt="This is a dom" style="max-width: 100%; height:auto"><!--預設-->
+        </picture>
+        
+        <h2 style="font-size:5vw">Responsive text</h2>
+        <hr>
+        <p style="font-size:3vw">Responsive text can be set by "vw" which is called view width.</p>
+        <p>The text will resize by the device width.</p>
+
+        <h2>Let's build your first website UI! - Media Query</h2>
+        <hr>
+        <h3>We'll use "media query" to build your website.</h3>
+        <p>The div below will have the css set to "@media screen and (max-width:800px)"</p>
+        <p>This means when the device width is less than 800px, execute the following code.</p>
+        <div class="left">
+            Left menu
+        </div>
+        <div class="main">
+            Main content
+        </div>
+        <div class="right">
+            Right content
+        </div>
+
+        <h3>Full example website</h3>
+        <div class="title">
+            <h1>PaddyTian Blog</h1>
+        </div>
+        <div style="overflow: auto;">
+            <div class="navbar">
+                <a href="#">Link1</a>
+                <a href="#">Link2</a>
+                <a href="#">Link3</a>
+                <a href="#">Link4</a>
+            </div>
+            <div class="main-2">
+                <h2>Blog1</h2>
+                <p>嗨，大家好，我是一名正在學習前端網頁的人。我對網頁設計和開發非常感興趣，希望能夠在這個領域中不斷學習和成長。我正在努力學習HTML、CSS和JavaScript等技術，希望有一天能夠成為一名優秀的前端工程師。</p>
+            </div>
+            <div class="right-about">
+                <h2>
+                    About me
+                </h2>
+                <p>Taiwan, software developer</p>
+            </div>
+        </div>
+        <div style="background-color: grey; text-align: center; padding:10px; float:left; width:100%; margin-top:5px;">
+            copy right
+        </div>
+
+        <h2>Framework</h2>
+        <hr>
+        <h3>First frameworks, we will introduce W3C.</h3>
+        <iframe src="Day15-5-June-2023-Framework-W3C.html" frameborder="1px"
+                width="100%" height="300"
+        >
+
+        </iframe>
+    </body>
+</html>
