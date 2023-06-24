@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" type="image/png" href="/picture/icon-boss.png">
+    <title>Day17-24-June-2023</title>
+</head>
+<body>
+    <h1>HTML Entities</h1>
+    
+    <h2>Non-breaking space</h2>
+    <hr>
+    <p style="border:1px solid black"> </p>
+    <p style="border:1px solid black;">&nbsp;</p>
+    <p>You could press F12 to see what different between space and non-break space.</p>
+    <p>Non-brake space contian a parargaph, but space don't.</p>
+
+    <h2>Other entities</h2>
+    <hr>
+    <h3>Less than</h3>
+    <p>Use &quot;&amp;lt;&quot; will be &quot;&lt;&quot;</p>
+
+    <h3>Greater than</h3>
+    <p>Use &quot;&amp;&gt;&quot; will be &quot;&gt;&quot;</p>
+
+    <h3>Ampersand</h3>
+    <p>Use &quot;&amp;amp;&quot; will be &quot;&amp;&quot;</p>
+
+    <h3>Double quotation mark</h3>
+    <p>Use &quot;&amp;quot;&quot; will be &apos;&quot;&apos;</p>
+
+    <h3>Single qutation mark, as known as aspostrophe</h3>
+    <p>Use &quot;&amp;aspos;&quot; will be &quot;&apos;&quot;</p>
+
+    <h2>Unit entities</h2>
+    <hr>
+    <h3>Cent</h3>
+    <p>Use &quot;&amp;cent;&quot; will be &quot;&cent;&quot;</p>
+
+    <h3>Pound</h3>
+    <p>Use &quot;&amp;pound;&quot; will be &quot;&pound;&quot;</p>
+
+    <h3>Yen</h3>
+    <p>Use &quot;&amp;yen;&quot; will be &quot;&yen;&quot;</p>
+
+    <h3>Euro</h3>
+    <p>Use &quot;&amp;euro;&quot; will be &quot;&euro;&quot;</p>
+
+    <h3>Copyright</h3>
+    <p>Use &quot;&amp;copy;&quot; will be &quot;&copy;&quot;</p>
+
+    <h3>Registered trademark</h3>
+    <p>Use &quot;&amp;reg;&quot; will be &quot;&reg;&quot;</p>
+
+    <h2>Combine Diacritical Mark</h2>
+    <hr>
+    <h3>What is that?</h3>
+    <p>Diacritial is some character like &apos;&#768; &apos; , &apos;&#769; &apos; , &apos;&#770; &apos;
+        &apos;&#771; &apos; , &apos;&#772; &apos; , &apos;&#773; &apos; which are called Mark.<br>  
+        You can combine Mark and character like a&#768; , b&#769; , c&#770; etc...
+    </p>
+    <h3>How to use it?</h3>
+    <p>You can enter the number like &amp;#768; or &amp;#x0300; and so on.<br>
+        If the unit is decimal, the range of Mark is 768 to 879.<br>
+        If Hexdecimal, the range of Mark is 0300 to 036F.
+    </p>
+
+    <h2>UTF-8 Greek and Coptic.</h2>
+    <hr>
+    <h3>What is that?</h3>
+    <p>It's as same as Diacritical, the range of mark is Dec 880 to 1023, and Hex is 0370 to 03FF.<br>
+        Here are some explames : Delta
+        <ul style="list-style-type: none;">
+        <li>&#9749;Use &amp;Delta; will be &Delta;</li>
+        <li>&#9749;Use &amp;#916; will be &#916;</li>
+        <li>&#9749;Use &amp;#x0394; will be &#x0394;</li>
+        </ul> 
+    </p>
+
+</body>
+</html>
