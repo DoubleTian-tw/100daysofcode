@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" type="image/png" href="/picture/laptop.ico">
+    <title>Day18-25-June-2023-HTML Forms</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Forms</h1>
+        <nav>
+            <a href="#form">Form</a> |
+            <a href="#input">Input</a> |
+            <a href="#label">Label</a> |
+            <a href="#checkbox">Checkbox</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Here are some forms.</h2>
+            <hr>
+            <code>
+                <ul>
+                    <li>&lt;form&gt;&lt;/form&gt;</li>
+                    <li>&lt;input&gt;&lt;/input&gt;</li>
+                    <li>&lt;label&gt;&lt;/label&gt;</li>
+                    <li>&lt;checkbox&gt;&lt;/checkbox&gt;</li>
+                </ul>
+            </code>
+            
+            <h2 id="form">Form</h2>
+            <hr>
+            <p>The form tag is used to create html form for user input.</p>
+
+            <h2 id="input">Input</h2>
+            <hr>
+            <p>This input type is text and the submit button type is submit.</p>
+            <form action="">
+                <label for="character-name">你最喜歡的角色名稱</label><br>
+                <input type="text" id="character-name" name="character-name" value="卍煞氣A卍"><br>
+                <label for="character-class">你最喜歡的角色職業</label><br>
+                <input type="text" id="character-class" name="character-class" value="法師"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p>This input type is text and password.</p>
+            <p>And you can reset the input using reset button.</p>
+            <form action="">
+                <label for="account">帳號</label><br>
+                <input type="text" id="account" name="account" value=""><br>
+                <label for="pwd">密碼</label><br>
+                <input type="password" id="pwd" name="pwd"><br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <p>The radio button can let you select what you like.</p>
+            <p>選擇你想轉職的職業:</p>
+            <form action="">
+                <input type="radio" id="swordman" name="character-class">
+                <label for="swordman">劍士</label><br>
+                <input type="radio" id="mega" name="character-class">
+                <label for="mega">法師</label><br>
+                <input type="radio" id="archer" name="character-class">
+                <label for="archer">弓箭手</label><br>
+                <input type="radio" id="thief" name="character-class">
+                <label for="thief">盜賊</label><br><br>
+                <input type="submit" value="Done!">
+            </form>
+            <p>選擇你想二轉的職業:</p>
+            <form action="">
+                <ul>
+                    <li>劍士</li>
+                    <input type="checkbox" id="fighter" name="character-class">
+                    <label for="fighter">狂戰士</label>
+                    <input type="checkbox" id="page" name="character-class">
+                    <label for="page">見習騎兵</label>
+                    <input type="checkbox" id="spearman" name="character-class">
+                    <label for="spearman">槍騎兵</label>
+
+                    <li>法師</li>
+                    <input type="checkbox" id="firePosion" name="character-class">
+                    <label for="firePosion">火毒</label>
+                    <input type="checkbox" id="iceLighting" name="character-class">
+                    <label for="iceLighting">冰雷</label>
+                    <input type="checkbox" id="cleric" name="character-class">
+                    <label for="cleric">僧侶</label>
+                    
+                    <li>弓箭手</li>
+                    <input type="checkbox" id="hunter" name="character-class">
+                    <label for="hunter">獵人</label>
+                    <input type="checkbox" id="crossbowMan" name="character-class">
+                    <label for="crossbowMan">努弓手</label>
+                    
+                    <li>盜賊</li>
+                    <input type="checkbox" id="assassin" name="character-class">
+                    <label for="assassin">刺客</label>
+                    <input type="checkbox" id="bandit" name="character-class">
+                    <label for="bandit">俠盜</label>                    
+                </ul>
+                <input type="submit" value="Submit">
+                <p class="charaterResult"></p>
+                <input type="button" onclick="alert('選的不錯')" value="Tell me"><br>
+                <br>
+                <label for="color">選擇你要上衣裝備的顏色</label>
+                <input type="color" id="color" name="color" value="#fffff8"><br><br>
+
+                <label for="createDate">創建日期</label>
+                <input type="date" id="createDate" name="createDate"><br><br>
+                
+                <label for="maxdate">最大日期</label>
+                <input type="date" id="maxdate" name="maxdate" max="2010-12-31"><br><br>
+                <label for="mindate">最小日期</label>
+                <input type="date" id="mindate" name="mindate" min="2023-12-31"><br><br>
+                
+                <label for="datetimelocal">有時間的日期</label>
+                <input type="datetime-local" id="datetimelocal" name="datetimelocal"><br><br>
+
+                <label for="yearAndMonth">沒有day的日期</label>
+                <input type="month" id="yearAndMonth" name="yearAndMonth"><br><br>
+            </form>
+            <form action="">
+                <label for="email">輸入你的email! 最新消息會告知你!</label>
+                <input type="email" id="email" name="email">
+                <input type="submit" value="Submit"><br><br>
+            </form>
+
+            <form action="">
+                <label for="">玩膩普通的button了嗎?</label>
+                <input type="image" src="/picture/goto-button.png" title="我也是button喔!"
+                alt="submit" style="width:25px; height:25px"><br><br>
+            </form>
+
+            <form action="">
+                <label for="">上傳一些你喜歡的角色照片吧!</label>
+                <input type="file" id="uploadFile" name="uploadFile">
+                <input type="submit" value="Upload"><br><br>
+            </form>
+
+            <form action="">
+                <label for="youCantSeeMe">以下是hidden text</label><br><br>
+                <input type="hidden" id="youCantSeeMe" name="youCantSeeMe" value="Hey!">
+                <input type="submit" value="提交你看不到的東西"><br><br>
+            </form>
+            
+            <form action="">
+                <label for="num">Select number 1 to 10 : </label>
+                <input type="number" id="num" name="num" min="1" max="10"><br><br>
+                <label for="numStep">Select number 1 to 100, and step is 10 : </label>
+                <input type="number" id="numStep" name="numStep" min="0" max="100" step="10" value="10"><br><br>
+                <label for="rng">Volume 1 to 100 : </label>
+                <input type="range" id="rng" name="rng" min="1" max="100">
+                <label for="">Step is 10</label>
+                <input type="range" id="rng" name="rng" min="1" max="100" step="10"><br><br>
+            </form>
+
+            <form action="">
+                <label for="">Search your favorite character : </label>
+                <input type="search" id="search" name="search">
+                <input type="submit" value="Search"><br><br>
+            </form>
+
+            <form action="">
+                <label for="tel">請留下你的電話 : </label>
+                <input type="tel" id="tel" name="tel" placeholder="0912-345-678" 
+                pattern="09[0-9]{2}-[0-9]{3}-[0-9]{2}" required>
+                <input type="submit" value="Submit"><br><br>
+            </form>
+
+            <form action="">
+                <label for="nowTime">現在時間 : </label>
+                <input type="time" id="nowTime" name="nowTime">
+                <input type="submit" value="Submit"><br><br>
+            </form>
+            
+            <form action="">
+                <label for="url">給我你最喜歡的網址</label>
+                <input type="url" id="url" name="url">
+                <input type="submit" value="Submit"><br><br>
+            </form>
+            
+            <form action="">
+                <label for="week">第N周 : </label>
+                <input type="week" id="week" name="week">
+                <input type="submit" value="Submit"><br><br>
+            </form>
+
+            <h2 id="label">Label</h2>
+            <hr>
+
+            <h2 id="checkbox">checkbox</h2>
+            <hr>
+        </article>
+    </main>
+</body>
+</html>
