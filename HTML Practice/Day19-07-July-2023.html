@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-employee.png">
+    <title>That's introduce form's attribute</title>
+</head>
+<body>
+    <h1>Get and Post</h1>
+    <h2>The default values of method</h2>
+    <hr>
+    <p>Basically, the default values of method is get!</p>
+    <h2>When you submit data with GET.</h2>
+    <hr>
+    <form action="" method="get">
+        <fieldset>
+            <legend>method="get"</legend>
+            <label for="fname">Submit your input value:</label>
+            <input type="text" id="fname" name="fname">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <p>When you submit value, it's append to the url string. <br>
+        If submit value is a password, it will display at the url. <br>
+        That is why the method of GET is not safe. 
+    </p>
+
+    <h2>When submit data with POST.</h2>
+    <hr>
+    <form action="" method="post">
+        <fieldset>
+            <legend>method="post"</legend>
+            <label for="fname2">Submit your input value:</label>
+            <input type="text" id="fname2" name="fname2">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <h2>Autocomplete</h2>
+    <hr>
+    <h3>Autocomplete is turned on for this form.</h3>
+    <form action="" autocomplete="on">
+        <fieldset>
+            <legend>autocomplete="on"</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h3>Autocomplete is turned off for this form.</h3>
+    <p>You might confuse when the attribute does not works. <br>
+        Since some version browser do not support it, you can set autocomplete="new-password" in input
+    </p>
+    <form action="" autocomplete="off">
+        <fieldset>
+            <legend>autocomplete="off"</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" autocomplete="new-password">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email" autocomplete="new-password">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h3>Please refer to <a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion">How to truned off the autocomplete.</a></h3>
+
+    <h2>Novalidate</h2>
+    <hr>
+    <p>When you setting Novalidate at tag, it will skip validate!</p>
+    <form action="" autocomplete="on" novalidate>
+        <fieldset>
+            <legend>novalidate</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    
+    <h2>Different form* attribute</h2>
+    <h3>Form id</h3>
+    <hr>
+    <p>在form tag外的input也可以使用id、name、form設定來進行傳傳輸資料</p>
+    <form action="" id="formid1" method="get">
+        <fieldset>
+            <legend>form id</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <label for="">This is out of form tag.</label>
+    <input type="text" id="notinform" name="notinform" form="formid1">
+    
+    <h3>formaction</h3>
+    <hr>
+    <p>可以在同一個form中設定兩種submit，但提交的action page不同</p>
+    <form action="" method="get">
+        <fieldset>
+            <legend>formaction</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="submit" formaction="2" value="Submit by formaction">
+        </fieldset>
+    </form>
+    
+    <h3>formenctype</h3>
+    <hr>
+    <p>可以在同一個form下設定不同的編碼傳輸方式</p>
+    <form action="" method="get" >
+        <fieldset>
+            <legend>formenctype</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="submit" formenctype="multipart/form-data" 
+            value="Submit by formenctype">
+        </fieldset>
+    </form>
+    
+    <h3>formmethod</h3>
+    <hr>
+    <p>可以在同一個form下設定不同的method</p>
+    <form action="" method="get" >
+        <fieldset>
+            <legend>formmethod</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit by get">
+            <input type="submit" formmethod="post" 
+            value="Submit by post">
+        </fieldset>
+    </form>
+    
+    <h3>formtarget</h3>
+    <hr>
+    <p>可以在同一個form下設定不同開啟視窗方式</p>
+    <form action="" target="_blank">
+        <fieldset>
+            <legend>formmethod</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit by _blank">
+            <input type="submit" formtarget="_self" 
+            value="Submit by self">
+        </fieldset>
+    </form>
+
+    <h3>formnovalidate</h3>
+    <hr>
+    <p>可以在同一個form下設定不同認證方式</p>
+    <form action="">
+        <fieldset>
+            <legend>form no validate</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="">Your Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit by validate">
+            <input type="submit" formnovalidate 
+            value="Submit by no validate">
+        </fieldset>
+    </form>
+
+
+
+
+
+</body>
+</html>
