@@ -24,3 +24,45 @@ nav > a:hover {
     color : orange;
     text-decoration: underline;
 }
+.rwd-title {
+    padding:20px;
+    width:100%;
+}
+.rwd-main {
+    float:left;
+    padding:20px;
+    width:60%;
+}
+.rwd-aside {
+    float:left;
+    padding:20px;
+    width:30%;
+    height: 100%;
+}
+.rwd-footer {
+    width: 100%;
+    padding:20px;
+    text-align: center;
+    float:left;
+}
+.rwd-navbar {
+    padding:10px;
+    display: flex;
+    /* width:100%; */
+    justify-content: center;
+    align-items: center;
+}
+.rwd-navbar > a {
+    margin:0px 5px;
+    color: white;
+    text-decoration: none;
+}
+.rwd-navbar > a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+@media screen and (max-width:800px) {
+    .rwd-title,.rwd-navbar,.rwd-main,.rwd-aside{
+        width: 100%;
+    }
+}

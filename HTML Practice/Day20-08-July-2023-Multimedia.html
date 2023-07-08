@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <link rel="stylesheet" href="/global/global.css">
+    <!-- <base href="/multimedia/"> -->
+    <title>Multimedia</title>
+    <style>
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        audio {
+            width: 100%;
+            padding:10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rwd-title">
+        <h1>Multimedia</h1>
+    </div>
+    <div class="rwd-navbar">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+    </div>
+    <div class="rwd-main">
+        <h1>Video</h1>
+        <h2>video tag</h2>
+        <hr>
+        <p>Video tag support video files only, it can't use url of web page!<br>
+            This tag has controls attribute.
+        </p>
+        <video width="400" height="250" controls>
+            <source src="/multimedia/outdoor-mmbcu.mp4" type="video/mp4">
+            Your browser does not support video tag. 
+        </video>
+        <p>This tag hasn't controls attribute.</p>
+        <video width="400" height="250">
+            <source src="/multimedia/outdoor-mmbcu.mp4" type="video/mp4">
+            Your browser does not support video tag. 
+        </video>
+        <p>This tag will mute on load.</p>
+        <video width="400" height="250" controls muted>
+            <source src="/multimedia/outdoor-mmbcu.mp4" type="video/mp4">
+            Your browser does not support video tag. 
+        </video>
+        <p>This tag will autoplay when load.</p>
+        <video width="400" height="250" controls muted autoplay>
+        <source src="/multimedia/outdoor-mmbcu.mp4" type="video/mp4">
+        Your browser does not support video tag. 
+        </video>
+        <h2>Controllers using javascript.</h2>
+        <hr>
+        <div style="text-align: center; width: 400px;height: 300px;">
+            <button onclick="playAndPause()">Play/Pause</button>
+            <button onclick="BigSize()">Big size</button>
+            <button onclick="SmallSize()">Small size</button>
+            <button onclick="NormalSize()">Normal size</button>
+            <button onclick="muted()">Muted</button>
+            <br>
+            <video width="400" height="250" id="video_js">
+                <source src="/multimedia/outdoor-mmbcu.mp4" type="video/mp4">
+                Your browser does not support video tag. 
+            </video>
+        </div>
+        
+        <script>
+            let video = document.getElementById("video_js");
+            function playAndPause(){
+                if (video.paused)
+                    video.play();
+                    else
+                    video.pause();
+                }
+                function BigSize(){
+                    video.width = 500;
+                }
+                function SmallSize(){
+                    video.width = 300;
+                }
+                function NormalSize(){
+                    video.width = 400;
+                }
+                function muted(){
+                    video.muted = video.muted ? false : true;
+                }
+        </script>
+        
+        <h1>Plug-in</h1>
+
+        <h2>Another Page with object element</h2>
+        <hr>
+        <object data="Day20-08-July-2023-Multimedia.html" type=""
+        width="100%" height="400px"></object>
+        
+        <h2>Insert image with object element</h2>
+        <hr>
+        <object data="/picture/foster-lake.jpg" type=""
+        width="100%" height="auto"></object>
+        
+        <h2>Another Page with embed element</h2>
+        <hr>
+        <embed src="Day20-08-July-2023-SVG_Graphics.html" type=""
+        width="100%" height="400px"></embed>
+        
+        <h2>Insert image with embed element</h2>
+        <hr>
+        <embed src="/picture/foster-lake.jpg" 
+        width="100%" height="auto">
+
+        <h1>Embed Youtube!</h1>
+        <h2>Using iframe to embedding</h2>
+        <hr>
+        <iframe src="https://www.youtube.com/embed/GcUF2z_Yt5Y" frameborder="0"
+        width="500" height="300"></iframe>
+    </div>
+    <div class="rwd-aside">
+        <h2>Music</h2>
+        <hr>
+        <audio controls>
+            <source src="/multimedia/1min-music.mp3" type="audio/mp3">
+            Your brower doesn't support audio element.
+        </audio>
+    </div>
+    <div class="rwd-footer">
+        <p>
+            Copyright
+        </p>
+    </div>
+
+</body>
+</html>

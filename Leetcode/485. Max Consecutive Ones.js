@@ -1,3 +1,5 @@
+
+
 function returnConsecutive1MaxNumber(array) {
     let max = 0;
     let current = 0;
