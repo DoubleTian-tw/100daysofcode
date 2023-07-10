@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <title>API-Drag and drog</title>
+    <script>
+        function drag(ev){
+            ev.dataTransfer.setData("text",ev.target.id);
+            console.log(ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+    </script>
+    <style>
+        #dropZone1,#dropZone2 {
+            padding: 20px;
+            border:1px solid white; 
+            width:250px;height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rwd-title">
+        <h1>Drag and Drog</h1>
+    </div>
+
+    <div class="rwd-main">
+        <div style="float:left; padding:20px; width: 40%;">
+            <h2>Undraggable</h2>
+            <hr>
+            <p>
+                <code>draggable="false"</code>
+            </p>
+            <img src="/picture/Maple-Bandit.png" alt="This character is bandit in Maple game."
+            width="200px" height="auto"
+            draggable="false">
+        </div>
+        <div style="float:left; padding:20px; width:40%">
+            <h2>Draggable</h2>
+            <hr>
+            <p>
+                <code>draggable="true"</code>
+            </p>
+            <div id="dropZone1" 
+            ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="/picture/Maple-Bandit.png" alt="This character is bandit in Maple game."
+                width="200px" height="auto" id="bandit"
+                draggable="true" ondragstart="drag(event)"
+                >
+            </div>
+            
+            <h2>Drop in here</h2>
+            <hr>
+            <div id="dropZone2"
+            ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rwd-navbar">
+        <h2>Music</h2>
+        <hr>
+    </div>
+
+    <div class="rwd-footer">
+        Copyright
+    </div>
+</body>
+</html>

@@ -23,16 +23,28 @@
         <hr>
         <p id="userLocation"></p>
         <button onclick="getLocation()">Display where you are</button>
+
+        <p id="dynamicLocation"></p>
+        <button onclick="getDynamicLocation()">Dynamic Location for smartPhone</button>
         <script>
             let userLocation = document.getElementById("userLocation");
+            let dynamicLocation = document.getElementById("dynamicLocation");
             function getLocation(){
                 if (navigator.geolocation)
-                    navigator.geolocation.getCurrentPosition(showPosition,errorPositon);
+                    navigator.geolocation.getCurrentPosition(position => showPosition(position,userLocation),errorPositon);
                 else
                     userLocation.innerHTML = "不支援Geolocation定位功能";
             }
-            function showPosition(position){
-                userLocation.innerHTML = `發現你在<br>經度:${position.coords.latitude}<br>緯度:${position.coords.longitude}`;
+            function getDynamicLocation(){
+                if (navigator.geolocation)
+                    navigator.geolocation.watchPosition(position => showPosition(position,dynamicLocation));
+                else
+                    dynamicLocation.innerHTML = "不支援Geolocation定位功能";
+
+            }
+            function showPosition(position,element){
+                element.innerHTML = `發現你在<br>經度:${position.coords.latitude}<br>緯度:${position.coords.longitude}<br>
+                                        確切的位置:${position.coords.accuracy}`;
             }
             function errorPositon(error){
                 // console.log(error + ": " + error.code)
@@ -50,7 +62,6 @@
                         userLocation.innerHTML = "不知名異常";
                         break;
                 }
-
             }
         </script>
     </div>
