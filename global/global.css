@@ -13,10 +13,56 @@ body {
     background-color: #222222;
     font-family: monospace;
 }
-a {
+nav {
+    text-align: center;
+}
+nav > a {
+    color : white;
+    text-decoration: none;
+}
+nav > a:hover {
+    color : orange;
+    text-decoration: underline;
+}
+.rwd-title {
+    padding:20px;
+    width:100%;
+}
+.rwd-main {
+    float:left;
+    padding:20px;
+    width:60%;
+}
+.rwd-aside {
+    float:left;
+    padding:20px;
+    width:30%;
+    height: 100%;
+}
+.rwd-footer {
+    width: 100%;
+    padding:20px;
+    text-align: center;
+    float:left;
+}
+.rwd-navbar {
+    padding:10px;
+    display: flex;
+    /* width:100%; */
+    justify-content: center;
+    align-items: center;
+}
+.rwd-navbar > a {
+    margin:0px 5px;
     color: white;
+    text-decoration: none;
 }
-a:hover {
-    color: #FF6353;   
+.rwd-navbar > a:hover {
+    color: orange;
+    text-decoration: underline;
 }
-
+@media screen and (max-width:800px) {
+    .rwd-title,.rwd-navbar,.rwd-main,.rwd-aside{
+        width: 100%;
+    }
+}

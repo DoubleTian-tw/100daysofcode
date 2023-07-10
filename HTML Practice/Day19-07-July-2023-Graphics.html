@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <title>What's Graphics in html?</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <h2>Canvas is used to draw some Graphics!</h2>
+    <hr>
+    <canvas id="canvas1" width="200px" height="100px" 
+    style="border:2px solid rgb(255, 96, 96); background-color:rgb(251, 251, 251)"></canvas>
+
+    <h2>You can add some line by javascript!</h2>
+    <hr>
+    <canvas id="canvas_line" width="200px" height="100px"
+    style="border:2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+
+    <script>
+        let cvs_line = document.getElementById("canvas_line");
+        let ctx_line = cvs_line.getContext("2d");
+        ctx_line.moveTo(0,100);
+        ctx_line.lineTo(200,0);
+        ctx_line.stroke();
+        ctx_line.moveTo(0,0);
+        ctx_line.lineTo(200,100);
+        ctx_line.stroke();
+    </script>
+
+    <h2>Let's try drawing a circle</h2>
+    <hr>
+    <canvas id="canvas_circle" width="200px" height="100px"
+    style="border:2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+
+    <script>
+        let cvs_circle = document.getElementById("canvas_circle");
+        let ctx_circle = cvs_circle.getContext("2d");
+        ctx_circle.beginPath();
+        ctx_circle.arc(95,50,50,0,2 * Math.PI);
+        ctx_circle.stroke();
+    </script>
+
+    <h2>Draw a text.</h2>
+    <hr>
+    <canvas id="canvas_text" width="200px" height="100px"
+    style="border: 2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+
+    <script>
+        let cvs_text = document.getElementById("canvas_text");
+        let ctx_text = cvs_text.getContext("2d");
+        ctx_text.font = "30px monospace";
+        ctx_text.fillText("FillText", 20, 40);
+        ctx_text.strokeText("StrokeText", 20, 80);
+    </script>
+
+    <h2>Draw Linear Gradient</h2>
+    <hr>
+    <canvas id="canvas_gradient" width="200px" height="100px"
+    style="border: 2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+
+    <script>
+        let cvs_gradient = document.getElementById("canvas_gradient");
+        let ctx_gradient = cvs_gradient.getContext("2d");
+        //Create gradient
+        let grd_gradient = ctx_gradient.createLinearGradient(0,100,200,0);
+        grd_gradient.addColorStop(0,"red");
+        grd_gradient.addColorStop(1,"white");
+        // Fill with gradient
+        ctx_gradient.fillStyle = grd_gradient;
+        ctx_gradient.fillRect(20,10,150,80);
+    </script>
+
+    <h2>Draw Circle Gradient</h2>
+    <hr>
+    <canvas id="canvas_circleGradient" width="200px" height="100px"
+    style="border: 2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+
+    <script>
+        let cvs_circleGradient = document.getElementById("canvas_circleGradient");
+        let ctx_circleGradient = cvs_circleGradient.getContext("2d");
+        //Create gradient
+        let grd_circleGradient = ctx_circleGradient.createRadialGradient(100,50,5, 100,50,100);
+        grd_circleGradient.addColorStop(0,"red");
+        grd_circleGradient.addColorStop(1,"white");
+        // Fill with gradient
+        ctx_circleGradient.fillStyle = grd_circleGradient;
+        ctx_circleGradient.fillRect(0,0,200,100);
+    </script>
+    
+    <h2>Fill your image</h2>
+    <hr>
+    <img id="source" src="/picture/click.jpg" alt="Click" 
+    width="100px" height="100px">
+    <canvas id="canvas_fillImage" width="110px" height="110px"
+    style="border: 2px solid rgb(255, 96, 96); background-color: rgb(251, 251, 251);"></canvas>
+    <p>
+        <button onclick="fillImage()">Fill In</button>
+    </p>
+    <script>
+        function fillImage(){
+            let cvs_fillImage = document.getElementById("canvas_fillImage");
+            let ctx_fillImage = cvs_fillImage.getContext("2d");
+            let img_fillImage = document.getElementById("source");
+            ctx_fillImage.drawImage(img_fillImage,10,10,100,100);
+        }
+    </script>
+
+</body>
+</html>
