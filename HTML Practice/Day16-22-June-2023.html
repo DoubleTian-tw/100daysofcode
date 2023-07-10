@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/global/global.css">
+        <link rel="icon" type="image/png" href="/picture/icon-boss.png">
+        <style>
+            h1,h2,p {
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .character-class {
+                background-color: #6a6a6a;
+                padding : 5px;
+                margin : 0px;
+                /* float: left; */
+            }
+            .character-class > h2,h3 {
+                padding : 5px;
+                margin : 10px;
+            }
+            .character {
+                background-color: #272727;
+            }
+            .character > p,img {
+                padding : 5px;
+                margin : 10px;
+            }
+            .character > hr {
+                margin : 10px
+            }
+            footer {
+                text-align: center;
+            }
+            .character.container {
+                display: flex
+            }
+            .character-news {
+                flex: 2;
+                padding:5px;
+                margin:0px;
+                background-color: #88887b;
+            }
+            .character-news > h2,p {
+                padding:5px;
+                margin:10px;
+                background-color: #272727;
+            }
+            .character-class {
+                flex: 8;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Computer Code</h1>
+
+        <h2>&lt;kbd&gt;</h2>
+        <hr>
+        <p>KBD is keybroad input, which introduce the way of keyboard.<br>
+            Just like this.
+        </p>
+        <kbd>Please press F5 to refresh your page.</kbd>
+
+        <h2>&lt;samp&gt;</h2>
+        <hr>
+        <p>samp is sample output from computer program.</p>
+        <samp>File not find. Please press F1</samp>
+
+        <h2>&lt;code&gt;</h2>
+        <hr>
+        <p>code is used to defined a piece of computer code.<br>
+            It haven't next line in default.
+        </p>
+        <code>
+            x=5;
+            y=6;
+            z=x+y;
+        </code>
+
+        <h2>&lt;pre&gt;</h2>
+        <hr>
+        <p>This is similar as &lt;code&gt;.<br>
+            It will preformatted the text, which will be displays exactly as written in the html source code.
+        </p>
+        <pre>
+        <code>
+    x=5;
+    y=7;
+    z=x+y;
+        </code>
+        </pre>
+
+        <h2>&lt;var&gt;</h2>
+        <hr>
+        <p>var tag is used to defined the variable in programming or in a mathematical expression.</p>
+        <p><var>a</var> is 12 and <var>b</var> is 15, then <var>a</var> + <var>b</var> will be 27</p>
+
+        <h1>Semantic Elements</h1>
+        <nav style="text-align:center;">
+            <a href="#">最新消息 |</a>
+            <a href="#">楓葉書籍 |</a>
+            <a href="#">下載專區 |</a>
+            <a href="#">楓葉會員 |</a>
+            <a href="#">台灣專區 |</a>
+        </nav>
+        <h2>&lt;section&gt;</h2>
+        <hr>
+        <section>
+            <h2>楓之谷的奇幻世界</h2>
+            <p>楓之谷是一個獨特的多人在線冒險遊戲，背景設定在一個充滿魔法和冒險的奇幻世界中。
+                這個世界中擁有許多神秘的地點和生物，玩家可以探索各種迷人的地區，例如蔚藍海岸、茂密森林和神秘的地下城。
+                楓之谷以其獨特的視覺風格和豐富的故事背景吸引了廣大的玩家群體。
+            </p>
+        </section>
+        <section>
+            <h2>多樣化的冒險者選擇</h2>
+            <p>楓之谷提供多種職業供玩家選擇，每個職業都有其獨特的特點和技能。戰士擅長近戰戰鬥，具有強大的體力和防禦能力；
+                法師擁有強大的魔法能力，可以施展各種攻擊和控制技能；弓箭手擅長遠程攻擊，擁有靈活的身手和準確的射擊；
+                盜賊則以敏捷和暗殺技巧著稱，善於進行偷襲和運用迴避技巧。
+                不同職業之間的差異性使得玩家可以根據個人喜好和遊戲風格來選擇合適的冒險者身份。
+            </p>
+        </section>
+
+        <h2>&lt;article&gt;</h2>
+        <hr>
+        
+        <article class="character-class">
+            <h2>職業類別</h2>
+            <article class="character">
+                <h3>初心者</h3>
+                <hr>
+                <p>最一開始的冒險者職業，身為甚麼都不知道的你，只能穿著單薄的衣褲以及簡單的長劍開始冒險。打敗那些旅途中的怪物並升等吧!
+                    到達指定等級後就可以選擇未來走的職業喔!是不是很興奮呢?
+                </p>
+            </article>
+            <article class="character">
+                <h3>戰士</h3>
+                <hr>
+                <p>戰士是一個強大的近戰職業，擁有高體力和防禦能力。他們可以承受更多傷害，同時對敵人造成嚴重的打擊。戰士的技能相對簡單，容易上手，適合初學者迅速進入遊戲世界。
+                </p>
+            </article>
+            <article class="character">
+                <h3>弓箭手</h3>
+                <hr>
+                <p>弓箭手是一個遠程攻擊職業，擁有優秀的準確性和敏捷性。他們可以從遠處對敵人造成傷害，同時具有一些避免敵人攻擊的技能。弓箭手的技能操作相對簡單，適合初學者掌握。
+                </p>
+            </article>
+            <article class="character">
+                <h3>法師</h3>
+                <hr>
+                <p>法師是一個強大的魔法職業，可以施展各種強力的攻擊和控制技能。他們擁有豐富的魔法能量，能夠對多個敵人進行範圍攻擊。儘管法師的技能操作較為複雜，但對於喜歡魔法和高傷害的初心者來說，法師是一個令人滿足的職業選擇。
+                </p>
+            </article>
+            <article class="character">
+                <h3>盜賊</h3>
+                <hr>
+                <p>盜賊是一個敏捷和暗殺技巧的職業，擅長偷襲和迴避敵人的攻擊。他們可以快速移動並造成致命的打擊。盜賊的技能操作較為技巧性，需要一些時間來熟練掌握，但對於追求高爆發傷害和敏捷遊戲風格的初學者來說，盜賊是一個令人挑戰的職業。
+                </p>
+            </article>
+        </article>
+        
+        <h2>&lt;header&gt;</h2>
+        <hr>
+        <p>Usually represent container for introdutroy content or navigation links.</p>
+        <p>Typically contains:</p>
+        <ul>
+            <li>&lt;h1&gt; ~ &lt;h6&gt;</li>
+            <li>logo or icon</li>
+            <li>authorship infro</li>
+        </ul>
+        <div class="character container">
+        <section class="character-class">
+            <header>
+                <h2>二轉選擇</h2>
+                <hr>
+            </header>
+            <h2>盜賊</h2>
+            <section class="character">
+                <img src="/picture/Maple-thief.png" alt="Thief" width="100px" height="100px">
+                <h3>刺客（Assassin）</h3>
+                <p>
+                    刺客是盜賊的第一個二轉職業，他們注重敏捷和暗殺技巧。刺客擁有更強大的攻擊能力和迴避能力，並可以使用雙刀進行快速連擊。他們的技能包括強化攻擊、瞬間移動和暗殺技巧，使他們成為擅長近戰戰鬥的職業。
+                </p>
+            </section>
+            <section class="character">
+                <img src="/picture/Maple-Bandit.png" alt="Bandit" width="80px" height="100px">
+                <h3>神偷（Bandit）</h3>
+                <p>
+                    神偷是盜賊的第二個二轉職業，他們擁有出色的遠程攻擊和輔助技能。神偷可以使用投擲武器進行遠程攻擊，同時具有干擾和控制敵人的能力。他們的技能包括投擲攻擊、迷惑和幻影技巧，使他們成為擅長遠程戰鬥和策略的職業。
+                </p>
+            </section>
+        </section>
+        <aside class="character-news">
+            <h2>快訊</h2>
+            <p>蒼龍俠客（Mercedes）：新職業到來! 是一個靈活的遠程戰鬥者。蒼龍俠客可以使用弓箭進行遠程攻擊，同時具有瞬間移動和快速連擊的能力。</p>
+            <p>神偷（Bandit）：新職業到來!是盜賊職業的第一個轉職。神偷擅長使用投擲武器進行遠程攻擊和控制技能，同時具有潛行和偷竊的能力。</p>
+        </aside>
+        </div>
+        <footer>
+            <p>Paddy Tian</p>
+            <p>&copy;Copyright</p>
+        </footer>
+    </body>
+    </html>

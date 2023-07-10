@@ -13,3 +13,10 @@ body {
     background-color: #222222;
     font-family: monospace;
 }
+a {
+    color: white;
+}
+a:hover {
+    color: #FF6353;   
+}
+
