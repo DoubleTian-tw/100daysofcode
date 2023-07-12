@@ -13,7 +13,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Leetcode\\1. Two Sum.js"
+            "program": "${workspaceFolder}\\Leetcode\\BubbleSort.js"
         }
     ]
 }
