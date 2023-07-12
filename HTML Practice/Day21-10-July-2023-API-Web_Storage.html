@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <title>Different Web Storage</title>
+    <style>
+        #div1,#div2 {
+            float: left;
+            width: 49%;
+            padding-right: 10px;
+        }
+    </style>
+    <script>
+        let local_clickcount = localStorage.clickcount;
+        let session_clickcount = sessionStorage.clickcount;
+        
+        function setStorage(type,id){
+            if(typeof(Storage) == "undefined"){
+                document.getElementById(id).innerHTML = `Sorry! Your browser does not support local storage.`; 
+                return;
+            }
+            let clickcount = (type === "local") ?  localStorage.clickcount : sessionStorage.clickcount;
+            if (clickcount){
+                clickcount = Number(clickcount) + 1;
+            }
+            else{
+                clickcount = 1;
+            }
+            if (type==="local")
+                localStorage.clickcount = clickcount;
+            else
+                sessionStorage.clickcount = clickcount;
+            document.getElementById(id).innerHTML = `Oops! You press on me! ${clickcount} times...`; 
+        }
+
+
+        function setLocalStorage(){
+            if(typeof(Storage) !== "undefined"){
+                if (local_clickcount)
+                    local_clickcount = Number(local_clickcount) + 1; 
+                else    
+                    local_clickcount = 1;
+                document.getElementById("localClick_p").innerHTML = `Oops! You press on me! ${local_clickcount} times...`; 
+            }
+            else{
+                document.getElementById("localClick_p").innerHTML = `Sorry! Your browser does not support local storage.`; 
+            }
+        }
+
+        function setSessionStorage(){
+            if(typeof(Storage) == "undefined"){
+                document.getElementById("sessionClick_p").innerHTML = "Sorry! Your browser does not support local storage.";
+                return;
+            }
+            
+            if(session_clickcount)
+                session_clickcount = Number(session_clickcount) + 1;
+            else
+                session_clickcount = 1;
+
+            document.getElementById("sessionClick_p").innerHTML = `Oops! You press on me! ${session_clickcount} times...`; 
+        }
+    </script>
+</head>
+<body>
+    <div class="rwd-title">
+        <h1>Web Storage</h1>
+    </div>
+
+    <div class="rwd-navbar">
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+        <a href="">Link4</a>
+    </div>
+
+    <div class="rwd-main">
+        <h2>What's different between those?</h2>
+        <div id="div1">
+            <h2>Local Storage</h2>
+            <hr>
+            <!-- <button onclick="setStorage('local','localClick_p')" type="button">Click ME!</button> -->
+            <button onclick="setLocalStorage()" type="button">Click ME!</button>
+            <p id="localClick_p">&nbsp;</p>
+        </div>
+        <div id="div2">
+            <h2>Session Storage</h2>
+            <hr>
+            <!-- <button onclick="setStorage('session','sessionClick_p')">Click ME!</button> -->
+            <button onclick="setSessionStorage()">Click ME!</button>
+            <p id="sessionClick_p">&nbsp;</p>
+        </div>
+        <p>You can refresh page after testing those click me button. <br>
+            And try again.
+        </p>
+    </div>
+
+    <div class="rwd-aside">
+        <h2>Music</h2>
+        <hr>
+    </div>
+
+    <div class="rwd-footer">
+
+    </div>
+</body>
+</html>

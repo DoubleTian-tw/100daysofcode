@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <title>Web Workers</title>
+    <script>
+        let msg = document.getElementById("msg");
+        let _work;
+        function startCount(){
+            if (typeof(Worker) == "undefined")
+            {    
+                document.getElementById("msg").innerHTML = "Sorry! Your browser does not support worker.";
+                return;
+            }
+
+            if (typeof(_work) == "undefined") 
+                _work = new Worker("Day21-10-July-2023-API-Web_Workers.js");
+
+            _work.onmessage = function(event){
+                //This is a callback function
+                document.getElementById("msg").innerHTML = event.data;
+            }
+        }
+        function stopCount(){
+            _work.terminate();
+            _work = undefined;
+        }
+    </script>
+</head>
+<body>
+    <div class="rwd-title">
+        <h1>Background Workers</h1>
+    </div>
+    <div class="rwd-navbar">
+        <a href="">Liink1</a><a href="">Liink2</a><a href="">Liink3</a><a href="">Liink4</a>
+    </div>
+    <div class="rwd-main">
+        <h2>Click that button</h2>
+        <hr>
+        <p>The worker js file must be external file.</p>
+        <p id="msg"></p>
+        <button type="button" onclick="startCount()">Start Counting</button>
+        <button type="button" onclick="stopCount()">Stop Counting</button>
+    </div>
+    <div class="rwd-aside">
+        <h2>Music</h2>
+        <hr>
+    </div>
+    <div class="rwd-footer">
+
+    </div>
+</body>
+</html>

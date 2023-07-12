@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content-type="text/event-stream;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="icon" href="/picture/icon-boss.png">
+    <title>SSE</title>
+    <script>
+        if (typeof(EventSource) !== "undefined"){
+            var source = new EventSource("http://127.0.0.1:5500/HTML Practice/Day22-11-July-2023-API-SSE.php");
+            source.onmessage = function(event) {
+                document.getElementById("sse_p").innerHTML += `${event.data}<br>`;
+            }
+        }
+        else{
+            document.getElementById("sse_p").innerHTML = "Sorry! Your browser does not support EventSource!";
+        }
+    </script>
+</head>
+<body>
+    <div class="rwd-title">
+        <h1>Server-sent Events</hh1>
+    </div>
+    <div class="rwd-navbar">
+        <a href="">Link1</a><a href="">Link2</a><a href="">Link3</a><a href="">Link4</a>
+    </div>
+    <div class="rwd-main">
+        <h2>SSE</h2>
+        <hr>
+        <p id="sse_p"></p>
+    </div>
+    <div class="rwd-aside">
+
+    </div>
+    <div class="rwd-footer">
+
+    </div>
+</body>
+</html>
